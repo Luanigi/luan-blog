@@ -109,3 +109,17 @@ body {
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 450px) {
+  .text-6xl {
+    font-size: 1rem;
+  }
+
+  .text-3xl {
+    font-size: 1.25rem;
+  }
+
+  .pos {
+    @apply md:top-[-240px] md:left-[50px] sm:top-[-200px]  sm:left-[80px] top-[-168px] left-[65px]
+  }
+}

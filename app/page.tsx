@@ -17,8 +17,8 @@ export default function Home() {
                 <Image src="/roman.png" alt="My Image" width={900} height={100} className="m-auto mt-[200px] imagequery rounded-lg" style={{filter: 'grayscale(50%) contrast(1.5) brightness(0.3)'}}/>
                 <div className="relative pos w-3/4 h-full text-yellow-100">
                     <h1 className="text-5xl">Luan Ajeti</h1>
-                    <p className="pb-4 ">Ich bin Luan, ein Webentwickler und ich schreibe Artikel über Religion, Philosophie, und Programmieren.</p>
-                    <Link href={"/blogs"} className="z-index-[10] text-sm rounded-md text-black p-4 bg-yellow-100 hover:bg-[#858266] hover:text-white duration-300 transition ease-in-out">lese Artikel</Link>
+                    <p className="pb-4 md:text-[1rem] text-[.9rem] w-5/6 md:w-full">Ich bin Luan, ein Webentwickler und ich schreibe Artikel über Religion, Philosophie, und Programmieren.</p>
+                    <Link href={"/blogs"} className="buton z-index-[10] md:text-sm text-[10px] md:p-4 p-3 rounded-md text-black bg-yellow-100 hover:bg-[#858266] hover:text-white duration-300 transition ease-in-out">lese Artikel</Link>
                 </div>
             </div>
         </div>
