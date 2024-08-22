@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -10,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -18,16 +22,90 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-yellow-100 dark:bg-zinc-900 transition duration-300 ease-in-out;
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', serif;
 }
+
+.article {
+  @apply flex flex-col gap-3 text-lg tracking-wide mb-20 dark:text-white;
+}
+
+.article > h1 {
+  @apply text-4xl text-center tracking-tight;
+}
+
+.article > h2 {
+  @apply text-3xl tracking-tight;
+}
+
+.article > ol {
+  @apply list-decimal flex flex-col mx-10 gap-2;
+}
+
+.article > ul {
+  @apply list-disc flex flex-col mx-10 gap-2;
+}
+
+.article > pre {
+  @apply bg-neutral-950 text-neutral-50 p-5 overflow-scroll;
+}
+
+.article > blockquote {
+  @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40;
+}
+
+.article > p > img {
+  @apply w-1/2 mx-auto;
+}
+
+.article > hr {
+  @apply border-neutral-600 border-opacity-40;
+}
+
+
+.dark {
+  @apply bg-zinc-900 transition duration-300 ease-in-out
+}
+
+.pos {
+  @apply md:top-[-240px] md:left-[50px] sm:top-[-200px]  sm:left-[80px] top-[-190px] left-[65px]
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  @apply dark:bg-zinc-900 bg-yellow-100
+} 
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .imagequery {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-6xl {
+    font-size: 2rem;
+  }
+
+  .text-3xl {
+    font-size: 1.25rem;
   }
 }
